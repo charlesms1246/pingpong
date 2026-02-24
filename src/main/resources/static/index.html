@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ping Pong Game</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Multiplayer Ping Pong</h1>
+        
+        <div id="controls">
+            <label for="playerSelect">I am:</label>
+            <select id="playerSelect">
+                <option value="player1">Player 1 (Left)</option>
+                <option value="player2">Player 2 (Right)</option>
+            </select>
+            <button onclick="connect()">Connect to Game</button>
+        </div>
+
+        <div id="scoreboard">
+            <span id="score1">0</span> - <span id="score2">0</span>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="400"></canvas>
+        <p>Use <b>W/S</b> for Player 1 and <b>Arrow Up/Down</b> for Player 2</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
